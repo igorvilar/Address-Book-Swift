@@ -14,6 +14,20 @@
 		5E5F729B1CDA94B100C1C1A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5F72991CDA94B100C1C1A2 /* LaunchScreen.storyboard */; };
 		5E5F72A61CDA94B200C1C1A2 /* Address_Book_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F72A51CDA94B200C1C1A2 /* Address_Book_SwiftTests.swift */; };
 		5E5F72B11CDA94B200C1C1A2 /* Address_Book_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F72B01CDA94B200C1C1A2 /* Address_Book_SwiftUITests.swift */; };
+		EA67181C1D0F3809002F6E71 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67181B1D0F3809002F6E71 /* AddContactViewController.swift */; };
+		EA67181E1D0F3823002F6E71 /* DetailsContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67181D1D0F3823002F6E71 /* DetailsContactViewController.swift */; };
+		EA6718201D0F3839002F6E71 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67181F1D0F3839002F6E71 /* EditViewController.swift */; };
+		EA6718221D0F3858002F6E71 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6718211D0F3858002F6E71 /* ContactTableViewCell.swift */; };
+		EA6718251D0F4E7F002F6E71 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6718241D0F4E7F002F6E71 /* Alert.swift */; };
+		EA67182A1D0F5275002F6E71 /* ContactBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6718291D0F5275002F6E71 /* ContactBook.swift */; };
+		EA7F16731D2D397C00FBCAC1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7F16721D2D397C00FBCAC1 /* libsqlite3.tbd */; };
+		EAB5302F1D2E90E3008FE21D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB530251D2E90E3008FE21D /* FMDatabase.m */; };
+		EAB530301D2E90E3008FE21D /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB530271D2E90E3008FE21D /* FMDatabaseAdditions.m */; };
+		EAB530311D2E90E3008FE21D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB530291D2E90E3008FE21D /* FMDatabasePool.m */; };
+		EAB530321D2E90E3008FE21D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5302B1D2E90E3008FE21D /* FMDatabaseQueue.m */; };
+		EAB530331D2E90E3008FE21D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5302E1D2E90E3008FE21D /* FMResultSet.m */; };
+		EAB530351D2E979F008FE21D /* MySQLiteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB530341D2E979F008FE21D /* MySQLiteHelper.swift */; };
+		EAB530371D2E9A2B008FE21D /* FilesOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB530361D2E9A2B008FE21D /* FilesOperations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +61,27 @@
 		5E5F72AC1CDA94B200C1C1A2 /* Address Book SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Address Book SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5F72B01CDA94B200C1C1A2 /* Address_Book_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address_Book_SwiftUITests.swift; sourceTree = "<group>"; };
 		5E5F72B21CDA94B200C1C1A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA67181B1D0F3809002F6E71 /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		EA67181D1D0F3823002F6E71 /* DetailsContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsContactViewController.swift; sourceTree = "<group>"; };
+		EA67181F1D0F3839002F6E71 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		EA6718211D0F3858002F6E71 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		EA6718241D0F4E7F002F6E71 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		EA6718291D0F5275002F6E71 /* ContactBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactBook.swift; sourceTree = "<group>"; };
+		EA7F16721D2D397C00FBCAC1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		EAB530231D2E90E3008FE21D /* Address Book Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Address Book Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		EAB530241D2E90E3008FE21D /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		EAB530251D2E90E3008FE21D /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		EAB530261D2E90E3008FE21D /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		EAB530271D2E90E3008FE21D /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		EAB530281D2E90E3008FE21D /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		EAB530291D2E90E3008FE21D /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		EAB5302A1D2E90E3008FE21D /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		EAB5302B1D2E90E3008FE21D /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		EAB5302C1D2E90E3008FE21D /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		EAB5302D1D2E90E3008FE21D /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		EAB5302E1D2E90E3008FE21D /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		EAB530341D2E979F008FE21D /* MySQLiteHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLiteHelper.swift; sourceTree = "<group>"; };
+		EAB530361D2E9A2B008FE21D /* FilesOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesOperations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7F16731D2D397C00FBCAC1 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +113,7 @@
 		5E5F72841CDA94B100C1C1A2 = {
 			isa = PBXGroup;
 			children = (
+				EA7F16721D2D397C00FBCAC1 /* libsqlite3.tbd */,
 				5E5F728F1CDA94B100C1C1A2 /* Address Book Swift */,
 				5E5F72A41CDA94B200C1C1A2 /* Address Book SwiftTests */,
 				5E5F72AF1CDA94B200C1C1A2 /* Address Book SwiftUITests */,
@@ -97,8 +134,13 @@
 		5E5F728F1CDA94B100C1C1A2 /* Address Book Swift */ = {
 			isa = PBXGroup;
 			children = (
+				EA6718231D0F4E6C002F6E71 /* Class */,
 				5E5F72901CDA94B100C1C1A2 /* AppDelegate.swift */,
 				5E5F72921CDA94B100C1C1A2 /* ViewController.swift */,
+				EA67181B1D0F3809002F6E71 /* AddContactViewController.swift */,
+				EA67181D1D0F3823002F6E71 /* DetailsContactViewController.swift */,
+				EA67181F1D0F3839002F6E71 /* EditViewController.swift */,
+				EA6718211D0F3858002F6E71 /* ContactTableViewCell.swift */,
 				5E5F72941CDA94B100C1C1A2 /* Main.storyboard */,
 				5E5F72971CDA94B100C1C1A2 /* Assets.xcassets */,
 				5E5F72991CDA94B100C1C1A2 /* LaunchScreen.storyboard */,
@@ -123,6 +165,61 @@
 				5E5F72B21CDA94B200C1C1A2 /* Info.plist */,
 			);
 			path = "Address Book SwiftUITests";
+			sourceTree = "<group>";
+		};
+		EA6718231D0F4E6C002F6E71 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				EAB530221D2E90D2008FE21D /* fmdb */,
+				EA6718281D0F525A002F6E71 /* helpers */,
+				EA6718271D0F524D002F6E71 /* models */,
+				EA6718261D0F5242002F6E71 /* utils */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		EA6718261D0F5242002F6E71 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA6718241D0F4E7F002F6E71 /* Alert.swift */,
+				EAB530361D2E9A2B008FE21D /* FilesOperations.swift */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		EA6718271D0F524D002F6E71 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				EA6718291D0F5275002F6E71 /* ContactBook.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		EA6718281D0F525A002F6E71 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EAB530341D2E979F008FE21D /* MySQLiteHelper.swift */,
+			);
+			name = helpers;
+			sourceTree = "<group>";
+		};
+		EAB530221D2E90D2008FE21D /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				EAB530241D2E90E3008FE21D /* FMDatabase.h */,
+				EAB530251D2E90E3008FE21D /* FMDatabase.m */,
+				EAB530261D2E90E3008FE21D /* FMDatabaseAdditions.h */,
+				EAB530271D2E90E3008FE21D /* FMDatabaseAdditions.m */,
+				EAB530281D2E90E3008FE21D /* FMDatabasePool.h */,
+				EAB530291D2E90E3008FE21D /* FMDatabasePool.m */,
+				EAB5302A1D2E90E3008FE21D /* FMDatabaseQueue.h */,
+				EAB5302B1D2E90E3008FE21D /* FMDatabaseQueue.m */,
+				EAB5302C1D2E90E3008FE21D /* FMDB.h */,
+				EAB5302D1D2E90E3008FE21D /* FMResultSet.h */,
+				EAB5302E1D2E90E3008FE21D /* FMResultSet.m */,
+				EAB530231D2E90E3008FE21D /* Address Book Swift-Bridging-Header.h */,
+			);
+			name = fmdb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +353,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6718221D0F3858002F6E71 /* ContactTableViewCell.swift in Sources */,
+				EA6718201D0F3839002F6E71 /* EditViewController.swift in Sources */,
+				EAB530371D2E9A2B008FE21D /* FilesOperations.swift in Sources */,
+				EA67181C1D0F3809002F6E71 /* AddContactViewController.swift in Sources */,
+				EAB5302F1D2E90E3008FE21D /* FMDatabase.m in Sources */,
+				EA67182A1D0F5275002F6E71 /* ContactBook.swift in Sources */,
+				EAB530321D2E90E3008FE21D /* FMDatabaseQueue.m in Sources */,
+				EAB530331D2E90E3008FE21D /* FMResultSet.m in Sources */,
+				EAB530351D2E979F008FE21D /* MySQLiteHelper.swift in Sources */,
+				EAB530311D2E90E3008FE21D /* FMDatabasePool.m in Sources */,
 				5E5F72931CDA94B100C1C1A2 /* ViewController.swift in Sources */,
+				EA67181E1D0F3823002F6E71 /* DetailsContactViewController.swift in Sources */,
 				5E5F72911CDA94B100C1C1A2 /* AppDelegate.swift in Sources */,
+				EA6718251D0F4E7F002F6E71 /* Alert.swift in Sources */,
+				EAB530301D2E90E3008FE21D /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,10 +511,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Address Book Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.igorvilar.Address-Book-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Address Book Swift/Address Book Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -412,10 +525,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Address Book Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.igorvilar.Address-Book-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Address Book Swift/Address Book Swift-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -484,6 +599,7 @@
 				5E5F72B71CDA94B200C1C1A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E5F72B81CDA94B200C1C1A2 /* Build configuration list for PBXNativeTarget "Address Book SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +608,7 @@
 				5E5F72BA1CDA94B200C1C1A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E5F72BB1CDA94B200C1C1A2 /* Build configuration list for PBXNativeTarget "Address Book SwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +617,7 @@
 				5E5F72BD1CDA94B200C1C1A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
