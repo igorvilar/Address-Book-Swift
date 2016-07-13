@@ -53,7 +53,8 @@ class AddContactViewController: UIViewController {
         if (isSuccess) {
             self.dismissViewControllerAnimated(true, completion: nil)
         } else {
-            Alert.AlertView("Alerta", MessageAlert: "Erro ao tentar salvar, tente novamente")
+            let alert = Alert.AlertView("Alerta", MessageAlert: "Erro ao tentar salvar, tente novamente")
+            self.presentViewController(alert, animated: true, completion: nil)
         }
 
         

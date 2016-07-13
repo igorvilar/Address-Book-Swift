@@ -67,7 +67,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let contactBook:ContactBook = marrContactBook.objectAtIndex(row) as! ContactBook
         print(contactBook.Name)
         let alert = Alert.AlertView("Alerta", MessageAlert: contactBook.Name)
-        self.presentViewController(alert, animated: true, completion: nil)    }
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 
 }
 
