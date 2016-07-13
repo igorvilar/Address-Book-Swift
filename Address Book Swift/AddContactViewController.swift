@@ -48,7 +48,7 @@ class AddContactViewController: UIViewController {
         contactBook.Address = AddressInput.text!
         contactBook.Phone = PhoneInput.text!
         
-        var isSuccess:Bool =  MySQLiteHelper.getInstance().addAddressBookData(contactBook)
+        let isSuccess =  MySQLiteHelper.getInstance().addAddressBookData(contactBook)
         
         if (isSuccess) {
             self.dismissViewControllerAnimated(true, completion: nil)
