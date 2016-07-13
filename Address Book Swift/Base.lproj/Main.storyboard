@@ -22,7 +22,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Contatos" id="Mk6-Az-WlY">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="b41-x4-tTM"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="b41-x4-tTM">
+                                            <connections>
+                                                <segue destination="xsL-vu-Iuc" kind="show" id="Mb2-Jq-cld"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -63,7 +67,6 @@
                     </view>
                     <connections>
                         <outlet property="listViewContacts" destination="c3n-BR-Rqb" id="325-La-Ylr"/>
-                        <segue destination="xsL-vu-Iuc" kind="presentation" id="rpj-Tm-FCu"/>
                         <segue destination="O5j-SD-OIJ" kind="showDetail" id="2cG-vn-gg6"/>
                     </connections>
                 </viewController>
@@ -231,28 +234,45 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Novo Contato" id="A7j-VL-GUA">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="4xs-kM-p1E"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="Yz6-hm-qO3"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="4xs-kM-p1E">
+                                            <connections>
+                                                <action selector="CancelAdd:" destination="xsL-vu-Iuc" id="doh-Sb-0ay"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="Yz6-hm-qO3">
+                                            <connections>
+                                                <action selector="SaveContact:" destination="xsL-vu-Iuc" id="365-CD-KMe"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6OX-cX-82P">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6OX-cX-82P">
                                 <rect key="frame" x="150" y="100" width="300" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xsL-vu-Iuc" id="1Va-bF-XKI"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LHR-FS-7A5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LHR-FS-7A5">
                                 <rect key="frame" x="150" y="140" width="300" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xsL-vu-Iuc" id="xHf-LR-itO"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efV-Re-Jcg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="efV-Re-Jcg">
                                 <rect key="frame" x="150" y="62" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="NKX-bx-BNC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xsL-vu-Iuc" id="unx-vP-nE3"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -270,6 +290,12 @@
                             <constraint firstItem="efV-Re-Jcg" firstAttribute="trailing" secondItem="6OX-cX-82P" secondAttribute="trailing" id="jcW-7T-9Lg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="AddressInput" destination="6OX-cX-82P" id="hwe-p8-Hm5"/>
+                        <outlet property="NameInput" destination="efV-Re-Jcg" id="vtW-fA-Wh8"/>
+                        <outlet property="PhoneInput" destination="LHR-FS-7A5" id="83h-Hp-Qql"/>
+                        <outlet property="SaveContact" destination="Yz6-hm-qO3" id="RoL-ae-u6k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kO4-iC-jzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
