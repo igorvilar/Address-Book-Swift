@@ -8,10 +8,22 @@
 
 import UIKit
 
+
 class DetailsContactViewController: UIViewController {
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    var idContactSelect: String!
+    var nameContactSelect: String!
+    var addressContactSelect: String!
+    var phoneContactSelect: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = nameContactSelect
+        addressLabel.text = addressContactSelect
+        phoneLabel.text = phoneContactSelect
 
         // Do any additional setup after loading the view.
     }
@@ -21,7 +33,12 @@ class DetailsContactViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func BackButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
+    @IBAction func EditButton(sender: AnyObject) {
+    }
     /*
     // MARK: - Navigation
 

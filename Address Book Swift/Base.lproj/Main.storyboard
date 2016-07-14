@@ -50,6 +50,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="O5j-SD-OIJ" kind="show" identifier="OpenDetailsContactSegue" id="TrR-Lu-YpE"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -67,7 +70,6 @@
                     </view>
                     <connections>
                         <outlet property="listViewContacts" destination="c3n-BR-Rqb" id="325-La-Ylr"/>
-                        <segue destination="O5j-SD-OIJ" kind="showDetail" id="2cG-vn-gg6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,8 +92,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Detalhes" id="Y8j-3E-Gq2">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="D4J-aJ-W2E"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="hW3-2e-FG3"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="D4J-aJ-W2E">
+                                            <connections>
+                                                <action selector="BackButton:" destination="O5j-SD-OIJ" id="VR5-AQ-f1O"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="hW3-2e-FG3">
+                                            <connections>
+                                                <action selector="EditButton:" destination="O5j-SD-OIJ" id="JMF-29-0EB"/>
+                                                <segue destination="0RD-3t-ANg" kind="show" id="q97-H8-flZ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -140,7 +151,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="0RD-3t-ANg" kind="presentation" id="d8c-21-6J2"/>
+                        <outlet property="addressLabel" destination="CsE-Jf-fTv" id="V3i-DF-FOQ"/>
+                        <outlet property="nameLabel" destination="coF-Xf-7t7" id="730-np-rHM"/>
+                        <outlet property="phoneLabel" destination="DyY-2Z-2Kc" id="T7O-Dh-omG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1M-QV-IoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
