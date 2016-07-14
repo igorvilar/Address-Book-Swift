@@ -9,7 +9,7 @@
 import UIKit
 
 class ContactBook: NSObject {
-    var IdContact: String = String()
+    var IdContact: Int32 = Int32()
     var Name: String = String()
     var Phone: String = String()
     var Address: String = String()

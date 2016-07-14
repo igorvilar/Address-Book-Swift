@@ -14,19 +14,28 @@ class DetailsContactViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    var idContactSelect: String!
-    var nameContactSelect: String!
-    var addressContactSelect: String!
-    var phoneContactSelect: String!
+    var idContactSelect: Int32!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = nameContactSelect
-        addressLabel.text = addressContactSelect
-        phoneLabel.text = phoneContactSelect
-
+       
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated) // No need for semicolon
+        getContactBookData()
+    }
+    
+    func getContactBookData()
+    {
+    var contactBook : ContactBook = ContactBook()
+        contactBook = MySQLiteHelper.getInstance().retrieveSelectContact(Int(idContactSelect!))
+        nameLabel.text = contactBook.Name
+        phoneLabel.text = contactBook.Phone
+        addressLabel.text = contactBook.Address
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -48,5 +57,20 @@ class DetailsContactViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "OpenEditContactSegue"
+        {
+            if let controller = segue.destinationViewController as? EditViewController {
+                controller.idContactSelect = idContactSelect
+                
+            }
+        }
+        
+    }
+
 
 }

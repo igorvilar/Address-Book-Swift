@@ -64,17 +64,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
        
     }
-   /*
-    -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    NSInteger IdTag = [sender tag];
-    DetailsContactViewController *transferViewController = segue.destinationViewController;
-    if([segue.identifier isEqualToString:@"OpenDetailsContactSegue"])
-    {
-    transferViewController.idContactSelect = [[contactsArray objectAtIndex:IdTag] IdContact];
-    }
-    
-    }*/
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "OpenDetailsContactSegue"
@@ -82,11 +71,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let indexPath = listViewContacts.indexPathForSelectedRow
                 let contactBook:ContactBook = marrContactBook.objectAtIndex(indexPath!.row) as! ContactBook
                 if let controller = segue.destinationViewController as? DetailsContactViewController {
-                   // controller.name = name
                     controller.idContactSelect = contactBook.IdContact
-                    controller.nameContactSelect = contactBook.Name
-                    controller.addressContactSelect = contactBook.Address
-                    controller.phoneContactSelect = contactBook.Phone
 
                 }
             }

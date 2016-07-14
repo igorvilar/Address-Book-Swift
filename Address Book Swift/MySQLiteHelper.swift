@@ -59,13 +59,13 @@ class MySQLiteHelper: NSObject {
     }
     func updateAddressBookData(contactBook: ContactBook) -> Bool {
         sharedInstance.database!.open()
-        let isUpdated = sharedInstance.database!.executeUpdate("UPDATE CONTACTS SET Name=?, ADDRESS=?, PHONE=? WHERE ID=?", withArgumentsInArray: [contactBook.Name, contactBook.Address, contactBook.Phone, contactBook.IdContact])
+        let isUpdated = sharedInstance.database!.executeUpdate("UPDATE CONTACTS SET NAME=?, ADDRESS=?, PHONE=? WHERE ID=?", withArgumentsInArray: [contactBook.Name, contactBook.Address, contactBook.Phone, Int(contactBook.IdContact)])
         sharedInstance.database!.close()
         return isUpdated
     }
-    func deleteAddressBookData(contactBook: ContactBook) -> Bool {
+    func deleteAddressBookData(idContactBook: Int) -> Bool {
         sharedInstance.database!.open()
-        let isDeleted = sharedInstance.database!.executeUpdate("DELETE FROM CONTACTS WHERE ID=?", withArgumentsInArray: [contactBook.IdContact])
+        let isDeleted = sharedInstance.database!.executeUpdate("DELETE FROM CONTACTS WHERE ID=?", withArgumentsInArray: [idContactBook])
         sharedInstance.database!.close()
         return isDeleted
     }
@@ -76,8 +76,8 @@ class MySQLiteHelper: NSObject {
         if (resultSet != nil) {
             while resultSet.next() {
                 let contactBook : ContactBook = ContactBook()
-                contactBook.IdContact = resultSet.stringForColumn("ID")
-                contactBook.Name = resultSet.stringForColumn("Name")
+                contactBook.IdContact = resultSet.intForColumn("ID")
+                contactBook.Name = resultSet.stringForColumn("NAME")
                 contactBook.Address = resultSet.stringForColumn("ADDRESS")
                 contactBook.Phone = resultSet.stringForColumn("PHONE")
                 marrContactBook.addObject(contactBook)
@@ -86,4 +86,21 @@ class MySQLiteHelper: NSObject {
         sharedInstance.database!.close()
         return marrContactBook
     }
+    func retrieveSelectContact(idContactBook: Int) -> ContactBook {
+        sharedInstance.database!.open()
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("SELECT * FROM CONTACTS WHERE ID=?", withArgumentsInArray:[idContactBook])
+        let contactBook : ContactBook = ContactBook()
+
+        if (resultSet != nil) {
+            while resultSet.next() {
+                contactBook.IdContact = resultSet.intForColumn("ID")
+                contactBook.Name = resultSet.stringForColumn("NAME")
+                contactBook.Address = resultSet.stringForColumn("ADDRESS")
+                contactBook.Phone = resultSet.stringForColumn("PHONE")
+            }
+        }
+        sharedInstance.database!.close()
+        return contactBook
+    }
+
 }
